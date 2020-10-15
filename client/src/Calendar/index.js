@@ -18,6 +18,8 @@ export default class extends React.Component {
 		this.style.width = this.width;
 	}
 
+	//sets the state, current date
+
 	weekdays = moment.weekdays();
 	weekdaysShort = moment.weekdaysShort();
 	months = moment.months();
@@ -38,6 +40,8 @@ export default class extends React.Component {
 	currentDay = () => {
 		return parseInt(this.state.dateContext.format('D'));
 	};
+
+	//month setup
 
 	firstDayofMonth = () => {
 		let dateContext = this.state.dateContext;
@@ -72,6 +76,7 @@ export default class extends React.Component {
 		this.props.onPrevMonth && this.props.onMonthChange();
 	};
 
+	// changes the month
 	onSelectChange = (e, data) => {
 		this.setMonth(data);
 		this.props.onMonthChange && this.props.onMonthChange();
@@ -116,6 +121,7 @@ export default class extends React.Component {
 		);
 	};
 
+	// Year
 	showYearEditor = () => {
 		this.setState({
 			showYearNav: true
@@ -130,19 +136,19 @@ export default class extends React.Component {
 		});
 	};
 
-	onYearChange = (e) => {
+	onYearChange = e => {
 		this.setYear(e.target.value);
 		this.props.onYearChange && this.props.onYearChange(e, e.target.value);
 	};
 
-	onKeyUpYear = (e) => {
+	onKeyUpYear = e => {
 		if (e.which > 0 || e.which < 2100) {
 			this.setYear(e.target.value);
 			this.setState({
 				showYearNav: false
-					});
-		};
-	}
+			});
+		}
+	};
 	YearNav = () => {
 		return this.state.showYearNav ? (
 			<input
@@ -168,13 +174,15 @@ export default class extends React.Component {
 		);
 	};
 
+	//selects the day
+
 	onDayClick = (e, day) => {
 		this.setState(
 			{
 				selectedDay: day
 			},
 			() => {
-				console.log('SELECTED DAY: ', this.state.selectedDay,this.state.dateContext.format('MMMM'), this.state.dateContext.format("YYYY"));
+				console.log('SELECTED DAY: ', this.state.selectedDay, this.state.dateContext.format('MMMM'), this.state.dateContext.format('YYYY'));
 			}
 		);
 	};
@@ -187,6 +195,8 @@ export default class extends React.Component {
 				</td>
 			);
 		});
+
+		//for empty spots in the calendar
 
 		let blanks = [];
 		for (let i = 0; i < this.firstDayofMonth(); i++) {
@@ -276,5 +286,5 @@ export default class extends React.Component {
 				</table>
 			</div>
 		);
+	}
 }
-};
