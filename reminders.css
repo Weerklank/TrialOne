@@ -1,0 +1,53 @@
+body {
+    background: url(./img/reminder.jpeg);
+}
+
+.container {
+    position: absolute;
+    height: 25pc;
+    width: 20pc;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    box-shadow: 0 0 55px black;
+    backdrop-filter: blur(5px);
+}
+
+.addTxt {
+    position: absolute;
+    height: 5px;
+    width: 60%;
+    margin: auto;
+    top: 25px;
+    right: 0;
+    left: 0;
+    outline: none;
+    border: none;
+    padding: 20px;
+    padding-right: 50px;
+}
+
+.addBtn {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    margin: auto;
+    top: 15px;
+    right: 35px;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: 0;
+}
+
+.addBtn img {
+    position: absolute;
+    height: 40px;
+    margin: auto;
+    top: 20px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
