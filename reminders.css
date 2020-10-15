@@ -1,5 +1,5 @@
 body {
-    background: url(./img/reminder.jpeg);
+    background: url(./img/reminders.jpeg);
 }
 
 .container {
@@ -50,4 +50,56 @@ body {
     right: 0;
     left: 0;
     bottom: 0;
+}
+
+.list {
+    position: absolute;
+    height: 75%;
+    width: 100%;
+    margin: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.list::-webkit-scrollbar {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.element {
+    position: relative;
+    height: fit-content;
+    width: 55%;
+    right: 0;
+    margin: 15px;
+    text-align: left;
+    transition: 0.2s;
+    padding: 10px;
+    background: #ffffff;
+    cursor: pointer;
+    border-radius: 2px;
+    padding-right: 80px;
+    word-wrap: break-word;
+}
+.element:hover {
+    transform: scale(1.1);
+}
+.tick {
+    position: absolute;
+    margin: auto;
+    height: 20px;
+    top: 0;
+    bottom: 0;
+    right: 50px;
+}
+.wastebasket {
+    position: absolute;
+    margin: auto;
+    height: 30px;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    filter: grayscale(1);
 }
