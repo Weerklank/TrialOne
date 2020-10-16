@@ -121,7 +121,7 @@ export default class extends React.Component {
 		);
 	};
 
-	// Year
+	// Year 
 	showYearEditor = () => {
 		this.setState({
 			showYearNav: true
