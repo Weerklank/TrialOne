@@ -1,0 +1,174 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #7ca5b811
+}
+
+header {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    height: 10vh;
+    align-items: center;
+}
+
+.logo-container, .nav-links, .login {
+    display: flex;
+
+}
+
+.logo-container {
+    flex: .5;
+}
+.logo {
+    font-weight: 400;
+    margin: 5px;
+}
+nav {
+    flex: 2;
+}
+.nav-links {
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-link {
+    color: #5f5f79;
+    font-size: 12px;
+    text-decoration: none;
+}
+.login {
+    flex: .3;
+    justify-content: flex-end;
+}
+
+.presentation {
+display: flex;
+width: 90%;
+margin: auto;
+min-height: 80vh;
+align-items: center;
+}
+.introduction {
+    flex: 1;
+}
+.intro-text h1 {
+    font-size: 44px;
+    font-weight: 500;
+    background: linear-gradient(to right, #32021F, #C1666B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.intro-text p {
+    margin-top: 5px;
+    font-size: 22px;
+    color: #2E294E;
+}
+
+.cta {
+    padding: 50px 0px 0px 0px;
+}
+.cta-select {
+    border: 2px solid #FFE8D1;
+    border-radius: 20px;
+    background: transparent;
+    color: #C1666B;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin: 30px 0px 0px 30px;
+}
+
+.cover {
+    flex: 1;
+    display: flex;
+    justify-content: center; height: 60vh;
+    padding: 80px 0px 0px 0px;
+}
+
+.cover img {
+    height: 100%;
+    filter: drop-shadow(0px 5x 3px black);
+    animation: drop 1.5s ease;
+}
+
+.big-eclipse {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.4;
+    height: 80%;
+}
+.medium-eclipse {
+    position: absolute;
+    top: 40%;
+    right: 25%;
+    z-index: -1;
+    opacity: 0.7;
+}
+.small-eclipse {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    z-index: -1;
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .presentation {
+        flex-direction: column;
+    }
+    .introduction {
+        margin-top: 5vh;
+        text-align: center;
+    }
+    .intro-text h1 {
+        font-size: 30px;
+    }
+    .intro-text p {
+        font-size: 18px;
+    }
+    .cta {
+        padding: 10px 0px 0px 0px;
+    }
+    .cover img {
+        height: 70%;
+    }
+    .small-eclipse,
+    .medium-eclipse,
+    .big-eclipse {
+        opacity: 0.2;
+    }
+}
+
+.login-btn {
+	border: 2px solid #FFE8D1;
+    border-radius: 20px;
+    background: transparent;
+    color: #C1666B;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin: 30px 0px 0px 30px;
+	transition: transform 80ms ease-in;
+}
+
