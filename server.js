@@ -24,10 +24,18 @@ app.get('/api/getList', (req,res) => {
 
 // Define API routes here
 
+
 // Send every other request to the React app
 // Define any API routes before this runs
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "/client/build/index.html"));
+});
+
+app.get('/:id', (req, res) => {
+  console.log("req.params", req.params)
+  res.send(` YOU CLICKED ON THE <b>${req.params.id}</b> DAY! 
+    This is where the day's reminder goes`)
+	res.sendFile(path.join(__dirname, '/client/build/index.html'));
 });
 
 app.listen(PORT, () => {
