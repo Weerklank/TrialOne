@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8000;
 const app = express();
 const connection = require("./config/connection")
 
@@ -9,7 +9,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-<<<<<<< HEAD
   app.use(express.static(path.join(__dirname, 'client/public')));
   //app.use(express.static("client/build"));
 }
@@ -18,13 +17,11 @@ app.get('/api/getList', (req,res) => {
   res.json(list);
   console.log('Sent list of items');
 });
-=======
   app.use(express.static(path.join(__dirname + "/client/build")));
-}
+
 
  app.use(express.static(path.join(__dirname + '/client/build')));
 
->>>>>>> 1e0c5b364fdcb5a6e62726fdd9c50eda5b7f0aaa
 // Define API routes here
 
 // Send every other request to the React app

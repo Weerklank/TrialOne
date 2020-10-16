@@ -2,10 +2,11 @@
 
 // This section details the items that are required
 var mysql = require('mysql');
-// var config = require('dotenv')
-require('dotenv').config();
+var config = require('dotenv');
+//require('dotenv').config();
 var connection;
-
+require('dotenv').config({path: __dirname + '/../.env'});
+console.log(process.env.MYSQLPASSWORD);
 
 // connection to the DB
 if (process.env.JAWSDB_URL) {
@@ -26,6 +27,8 @@ connection.connect(function (err) {
     if (err) {
         console.error("error connecting: " + err.stack);
         return;
+    } else {
+        console.log("Connected to database")
     }
 });
 
