@@ -1,0 +1,241 @@
+body {
+    text-align: center;
+    background-color: #b8af7c11;
+    font-family: "Poppins";
+    font: "Poppins Regular";
+    position: relative;
+}
+
+/* The mood name that appears on screen */
+.emote {
+    height: 0%;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    color: grey;
+    /* opacity: 0; */
+    position: fixed;
+    bottom: 50%;
+    display: flex;
+    flex-direction: column-reverse;
+    z-index: 2;
+    user-select: none;
+}
+
+/* The images on the mood buttons */
+img {
+    width: 170%;
+}
+
+img:hover {
+    opacity: 50%;
+}
+
+/* When the mood button is selected, to make the image less opaque */
+.opacity {
+    opacity: 50%;
+}
+
+.btnSil {
+    background-image: radial-gradient(#eaeaea, #eaeaea, #c0c0c0);
+    border: 1px solid #c0c0c0;
+}
+
+.btnGold {
+    background-image: radial-gradient(#f8eacc, #f8eacc, #eac16a);
+    border: 1px solid #eac16a;
+}
+
+.button-column {
+    max-height: 5in;
+    max-width: 1in;
+    height: 50%;
+    width: 7%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column-reverse;
+    position: fixed;
+    margin: 5px;
+    bottom: 25%;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.button-row {
+    height: 7%;
+    width: 100%;
+    position: sticky;
+    bottom: 1%;
+    border-radius: 25px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+}
+
+.br {
+    width: 100%;
+    padding-top: 20%;
+}
+
+.colButton {
+    width: .7in;
+    padding-top: .7in;
+    border-radius: 50%;
+    border: 1px solid grey;
+}
+
+.lineButton {
+    height: .1in;
+    width: .7in;
+    background-color: transparent;
+    border: 1px solid grey;
+}
+
+.gold {
+    background-color: #eac16a;
+}
+
+.silver {
+    background-color: #c0c0c0;
+}
+
+.blue {
+    background-image: linear-gradient(to top, #7ca5b8,#ddd7cb);
+}
+
+.red {
+    background-image: linear-gradient(to top, #c5898c,#ffe5e6);
+}
+
+.purple {
+    background-image: linear-gradient(to top, #9a92ce,#eceaff);
+}
+
+.paper {
+    width: 8.5in;
+    height: 11in;
+    position: relative;
+    left: 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    transform: translate(-50%);
+}
+
+.line-gold {
+    border: 2px solid #eac16a;
+}
+
+.lines-gold {
+    border: 1px solid #eac16a;
+    width: 90%;
+    height: 90%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.line-silver {
+    border: 2px solid #c0c0c0;
+}
+
+.lines-silver {
+    border: 1px solid #c0c0c0;
+    width: 90%;
+    height: 90%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.journal {
+    height: 95%;
+    width: 95%;
+    background-color: transparent;
+    font-size: 150%;
+    border: none;
+    resize: none;
+    outline: none;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.newButton {
+    /* border: 2px solid grey; */
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    transition: transform 80ms ease-in;
+    margin: auto;
+}
+
+.selected {
+    outline: none;
+    box-shadow: .5px .5px 10px 5px white;
+    background-color: white;
+}
+
+.submit-btn {
+	border: 2px solid #FFE8D1;
+    border-radius: 20px;
+    background: transparent;
+    color: #C1666B;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin: 30px 0px 0px 30px;
+    transition: transform 80ms ease-in;
+    z-index: 4;
+}
+
+.newButton:active, .colButton:active, .lineButton:active, .submit-btn:active{
+	transform: scale(0.95);
+}
+
+.newButton:hover, .colButton:hover{
+    outline: none;
+    box-shadow: .5px .5px 10px 5px white;
+    background-color: white;
+}
+
+.lineButton:hover {
+    outline: none;
+    box-shadow: .5px .5px 10px 5px white;
+}
+
+.submit-btn:hover {
+    box-shadow: .5px .5px 10px 5px white;
+}
+
+.hidden {
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+:focus {
+    outline: none;
+}
+
+.shown {
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+
+.cry {
+    width: 45px;
+}
